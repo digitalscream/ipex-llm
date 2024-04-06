@@ -324,8 +324,8 @@ def get_config(model: str,
     # NOTE: This is a hack. This does not work for local models.
     # FIXME: Remove this once the Mistral model is available in the stable
     # version of HF transformers.
-    if "mistral" in model.lower():
-        return MistralConfig.from_pretrained(model, revision=revision)
+    # if "mistral" in model.lower():
+    #     return MistralConfig.from_pretrained(model, revision=revision)
 
     try:
         config = AutoConfig.from_pretrained(
